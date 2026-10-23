@@ -1,0 +1,11 @@
+# Elementos del conjunto
+set PROVEEDORES := S1 S2 S3;
+
+# Coste por unidad de cada proveedor
+param Coste :=
+S1 4
+S2 3
+S3 5;
+
+# Demanda mínima a cubrir
+param Demanda := 100;

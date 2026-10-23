@@ -1,0 +1,12 @@
+# Script de resolución para el Ejercicio 3
+reset;
+model compras.mod;
+data compras.dat;
+option solver highs;
+solve;
+display Compra, CosteTotal;
+
+printf "Proveedor,Unidades\n" > "resultados3.csv";
+for {p in PROVEEDORES} {
+    printf "%s,%f\n", p, Compra[p] >> "resultados3.csv";
+}
